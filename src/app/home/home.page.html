@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+
+
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button  ></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content >
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="https://www.pngkit.com/png/detail/18-180721_free-png-darth-vader-png-images-transparent-darth.png" alt="Free Png Darth Vader Png Images Transparent - Darth Vader Face Png@pngkit.com">
+      </ion-avatar>
+      <ion-label>
+       <h1>Darth Vader</h1> 
+       <p> Gathered:<span class="money">100 Republic Credit</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
