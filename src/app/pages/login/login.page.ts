@@ -9,12 +9,16 @@ import { LoginPageForm } from './login.page.form';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  form!: FormGroup;
+ public form!: FormGroup;
+ emailField!: FormGroup ;
+ passwordField!: FormGroup ;
 
   constructor(private router:Router,private formBuilder:FormBuilder) { }
 //we need to create a form as soon as the loginpage is initializes 
   ngOnInit() {
     this.form=new LoginPageForm(this.formBuilder).createForm();
+    this.emailField = this.form.get('email') as FormGroup;
+    this.passwordField = this.form.get('password') as FormGroup;
   }
   login(){
     this.router.navigate(['home'])
