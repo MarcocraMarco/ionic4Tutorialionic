@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginPageForm } from './login.page.form';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  form!: FormGroup;
 
-  constructor(private router:Router) { }
-
+  constructor(private router:Router,private formBuilder:FormBuilder) { }
+//we need to create a form as soon as the loginpage is initializes 
   ngOnInit() {
-    
+    this.form=new LoginPageForm(this.formBuilder).createForm();
   }
   login(){
     this.router.navigate(['home'])

@@ -18,6 +18,11 @@ describe('LoginPage', () => {
     router=TestBed.get(Router);
     fixture.detectChanges();
   });
+  
+  it('should create form on init',()=>{
+    component.ngOnInit();
+    expect(component.form).not.toBeUndefined();
+  });
   it('should go to homePage in logIn', () => {
     spyOn(router,'navigate');
     component.login();
@@ -28,4 +33,8 @@ describe('LoginPage', () => {
     component.register();
     expect(router.navigate).toHaveBeenCalledWith(['register'])
   });
-});
+
+} )
+
+ 
+
