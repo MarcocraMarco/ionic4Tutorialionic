@@ -19,7 +19,7 @@ export class ErrorMessageComponent  implements OnInit {
   ngOnInit() {}
 
   shouldShowComponent(){
-    if(this.field?.touched && this.field!.errors?.[this.error]){
+    if(this.field?.touched && this.field!.errors?.[this.error]){ // is field touched? are 
       return true;
     }
     return false;
